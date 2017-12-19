@@ -6,20 +6,40 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author Shezar Khan
  */
-public class Cookie {
-    
-    
-    public Cookie(String name, int number, int pricePer12)
-    {
-        
+public class Cookie extends DessertItem {
+
+    // instance variables
+    private int number;
+    private int pricePer12;
+
+    public Cookie(String name, int number, int pricePer12) {
+        // constructor
+        super(name);
+        this.number = number;
+        this.pricePer12 = pricePer12;
     }
 
-    
-    public String toString()
-    {
-        
+    /**
+     *
+     * @return calculate the cost of the cookies based on the number purchased
+     * in dozens
+     */
+    @Override
+    public int getCost() {
+        // calculate cost
+        int cost = (int) Math.round((number * pricePer12) / 12);
+        return cost;
     }
-    
+
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public String toString() {
+
+    }
+
 }

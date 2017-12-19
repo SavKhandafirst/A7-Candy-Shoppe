@@ -6,20 +6,34 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author Shezar Khan
  */
-public class IceCream {
-
-    public IceCream(String name, int cost)
-    {
-        
-    }
-
-  
-    public String toString()
-    {
-     
-       
-    }
+public class IceCream extends DessertItem {
     
+    //instance variables
+    private int cost;
+
+    public IceCream(String name, int cost){
+        super(name);
+        this.cost = cost;
+    }
+
+    /**
+     * 
+     * @return simply return the cost  
+     */
+    @Override
+    public int getCost(){
+        return cost;
+    }
+  
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public String toString() {
+         
+    }
+     
 }

@@ -40,7 +40,18 @@ public class Candy extends DessertItem {
      */
     @Override
     public String toString() {
-
+        // empty string
+        String candyOutput = "";
+        // converting the cost to dollars from cents
+        String cents2Dollars = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        // determine length of name
+        int lengthName = super.getName().length();
+        // determine space available for cost to be placed
+        int spaceLeft = DessertShoppe.RECEIPT_WIDTH - lengthName;
+        // format the information given 
+        candyOutput += this.weight + " lbs. @ $" + DessertShoppe.cents2dollarsAndCents(this.pricePerLbs) + " /lb." + "\n" + super.getName();
+        // return
+        return candyOutput;    
     }
 
 }

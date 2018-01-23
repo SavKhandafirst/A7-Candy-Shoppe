@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Adam
+ * @author Adam Lamont
  */
 public class Checkout {
     
